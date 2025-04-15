@@ -100,27 +100,7 @@ fun FormCreateScreen(navController: NavHostController) {
                 )
             )
         },
-        bottomBar = {
-            BottomAppBar(
-                containerColor = MaterialTheme.colorScheme.surface
-            ) {
-                Row(
-                    modifier = Modifier.fillMaxWidth(),
-                    horizontalArrangement = Arrangement.End
-                ) {
-                    Button(
-                        onClick = { },
-                        contentPadding = PaddingValues(horizontal = 20.dp, vertical = 0.dp),
-                        colors = ButtonDefaults.buttonColors(
-                            containerColor = MaterialTheme.colorScheme.primary,
-                            contentColor = MaterialTheme.colorScheme.onPrimary
-                        )
-                    ) {
-                        Text("Guardar")
-                    }
-                }
-            }
-        }
+
     ) { innerPadding ->
         Column(
             modifier = Modifier
@@ -229,6 +209,7 @@ fun FormCreateScreen(navController: NavHostController) {
                     Button(onClick = { launcher.launch("image/*") }) {
                         Text("Subir imagen")
                     }
+
                 }
 
                 TypeContent.SERIE -> {
